@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #5DCCD3;
+    padding: 20px;
+}
+body a {
+         text-decoration: none;
+            color: black;
+}
+
+.container{
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 30px;
+    background-color: #FAFAFA;
+    width: 95vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas:
+    'header header header header'
+    'main main main main'
+    'footer footer footer footer';
+}
+
+header{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr 3fr;
+    grid-template-areas: "l n lin";
+
+    grid-area: header;
+    padding: 5px;
+    & > .logo{
+        display: flex;
+        justify-content: space-around;
+        grid-area: l;
+    }
+    & > nav{
+        grid-area: n;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    & > .links{
+        grid-area: lin;
+    }
+
+}
+
+
+
+main{
+    grid-area: main;
+    background-color: blue;
+}
+
+footer{
+    grid-area: footer;
+}
