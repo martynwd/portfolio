@@ -1,24 +1,37 @@
+@font-face{
+    font-family: "JetBrains Mono";
+    src: url(../fonts/JetBrainsMono-Regular.ttf)
+}
 body{
     display: flex;
     justify-content: center;
     align-self: center;
     background-color: #5DCCD3;
     padding: 20px;
+    font-size:20px;
 }
 body a {
          text-decoration: none;
             color: black;
 }
-
+code {
+    font-size: 30px;
+    font-family: 'JetBrains Mono';
+}
+ul{
+    & > li{
+        list-style-type: none;
+    }
+}
 .container{
     font-family: 'Roboto Mono', monospace;
     border-radius: 30px;
     background-color: #FAFAFA;
     width: 95vw;
-    height: 90vh;
+    height: 155vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 40fr 1fr;
     grid-template-areas:
     'header header header header'
     'main main main main'
@@ -28,24 +41,35 @@ body a {
 header{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 5fr 3fr;
+    grid-template-columns: 2fr 7fr 1fr;
+    margin-inline-end: 5%;
+    margin-bottom: 5%;
     grid-template-areas: "l n lin";
 
     grid-area: header;
-    padding: 5px;
+    padding: 2%;
     & > .logo{
         display: flex;
+        align-items: center;
         justify-content: space-around;
         grid-area: l;
     }
     & > nav{
         grid-area: n;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: space-around;
         
     }
     & > .links{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         grid-area: lin;
+        & > a{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
     }
 
 }
@@ -54,9 +78,43 @@ header{
 
 main{
     grid-area: main;
-    background-color: blue;
+    margin-bottom: 3%;
+    & > .about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        font-size: 30px;
+        & > .photo{
+            margin: 10%;
+            & > img{
+                border-radius: 40%;
+            }
+            
+        }
+    }
+    & > .skills{
+        display: flex;
+        height: 20vh;
+        align-items: center;
+        justify-content: space-around   ;
+    }
+}
+
+.topic{
+    margin: 5% 3% 3% 3%;
+}
+.code{
+    padding:3%;
+}
+.quote{
+    margin-top: 5%;
 }
 
 footer{
+    padding: 4rem;
+    height: 7vh;
+    background-color: #CCCCCC;
+    border-radius: 0 0  30px 30px;
     grid-area: footer;
 }
