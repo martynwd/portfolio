@@ -35,7 +35,7 @@ ul > li {
   font-family: 'Roboto Mono', monospace;
   border-radius: 30px;
   background-color: #FAFAFA;
-  width: 95vw;
+  width: 95%;
   height: 155vh;
   display: -ms-grid;
   display: grid;
@@ -129,7 +129,7 @@ main > .about {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 30vh;
+  height: 10rem;
   font-size: 30px;
 }
 
@@ -145,7 +145,7 @@ main > .skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 20vh;
+  height: 20%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -167,7 +167,6 @@ main > .skills {
 
 footer {
   padding: 4rem;
-  height: 7vh;
   background-color: #CCCCCC;
   border-radius: 0 0  30px 30px;
   -ms-grid-row: 3;

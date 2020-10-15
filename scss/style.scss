@@ -28,7 +28,7 @@ ul{
     font-family: 'Roboto Mono', monospace;
     border-radius: 30px;
     background-color: #FAFAFA;
-    width: 95vw;
+    width: 95%;
     height: 155vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -84,7 +84,7 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 30vh;
+        height: 10rem;
         font-size: 30px;
         & > .photo{
             margin: 10%;
@@ -96,7 +96,7 @@ main{
     }
     & > .skills{
         display: flex;
-        height: 20vh;
+        height: 20%;
         align-items: center;
         justify-content: space-around   ;
     }
@@ -114,7 +114,6 @@ main{
 
 footer{
     padding: 4rem;
-    height: 7vh;
     background-color: #CCCCCC;
     border-radius: 0 0  30px 30px;
     grid-area: footer;
