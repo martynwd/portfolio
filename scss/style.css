@@ -212,12 +212,12 @@ main > .about > .photo {
 }
 
 main > .about > .photo > img {
-  border-radius: 40%;
+  border-radius: 50%;
 }
 
 @media only screen and (min-width: 310px) and (max-width: 1024px) {
   main > .about > .photo > img {
-    width: 80px;
+    width: 90px;
     height: 90px;
   }
 }
