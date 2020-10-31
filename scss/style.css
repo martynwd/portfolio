@@ -91,8 +91,9 @@ header > .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-ar;
+      -ms-flex-pack: space-ar;
+          justify-content: space-ar;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: l;
@@ -127,6 +128,12 @@ header > nav {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 400px) {
+  header > nav {
+    display: none;
+  }
 }
 
 header > .links {

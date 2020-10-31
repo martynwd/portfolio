@@ -64,7 +64,7 @@ header{
     & > .logo{
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-ar;
         grid-area: l;
         & > .logo_svg{
             @media only screen and (min-width: 310px)  and (max-width: 1024px) {
@@ -83,6 +83,9 @@ header{
 
     }
     & > nav{
+        @media only screen and (min-width: 310px)  and (max-width: 400px) {
+            display: none;
+        }
         grid-area: n;
         display: flex;
         align-items: center;
