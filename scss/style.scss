@@ -3,11 +3,16 @@
     src: url(../fonts/JetBrainsMono-Regular.ttf)
 }
 body{
+
     display: flex;
     justify-content: center;
     align-self: center;
     background-color: #5DCCD3;
     padding: 20px;
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        padding: 0px;
+        font-size: 10px;
+    }
     font-size:20px;
 }
 body a {
@@ -15,6 +20,9 @@ body a {
             color: black;
 }
 code {
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        font-size: 10px;
+    }
     font-size: 30px;
     font-family: 'JetBrains Mono';
 }
@@ -30,6 +38,10 @@ ul{
     background-color: #FAFAFA;
     width: 95%;
     height: 155vh;
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        height: 100vh;
+        width: 100%;
+    }
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 40fr 1fr;
@@ -54,6 +66,21 @@ header{
         align-items: center;
         justify-content: space-around;
         grid-area: l;
+        & > .logo_svg{
+            @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+                width: 25px;
+                height: 25px;
+            }
+            margin:0;
+            width: 50px;
+            height: 50px;
+        }
+        & > .logo_name{
+            
+            margin:0;
+
+        }
+
     }
     & > nav{
         grid-area: n;
@@ -63,13 +90,19 @@ header{
         
     }
     & > .links{
+        @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+            font-size: 10px;
+        }
         display: flex;
         align-items: center;
         justify-content: space-around;
         grid-area: lin;
         & > a{
-            margin-left: 1rem;
-            margin-right: 1rem;
+            margin: 0 16px;
+        }
+        & > img{
+            width: 150px;
+            height: 150px;
         }
     }
 
@@ -81,14 +114,25 @@ main{
     grid-area: main;
     margin-bottom: 3%;
     & > .about{
+        @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+            font-size: 10px;
+            height: 5rem;
+        }
         display: flex;
         justify-content: center;
         align-items: center;
         height: 10rem;
         font-size: 30px;
         & > .photo{
+            @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+                margin:5px;
+            }
             margin: 10%;
             & > img{
+                @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+                    width: 80px;
+                    height: 90px;
+                }
                 border-radius: 40%;
             }
             
@@ -113,8 +157,41 @@ main{
 }
 
 footer{
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        padding: 1rem;
+    }
     padding: 4rem;
     background-color: #e7e7e7;
     border-radius: 0 0  30px 30px;
     grid-area: footer;
+}
+.logo_name{
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        font-size:10px;
+    }
+}
+.svg_icon{
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        width: 20px;
+    }
+    width: 40px;
+}
+.svg_icon_lg{
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        width: 30px;
+    }
+    width: 100px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% {  transform: rotate(359deg); }
+}
+#react {
+    animation: spin 2s linear infinite;
+    width: 150px;
+    height: 150px;
+    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        width: 30px;
+        height: 30px;
+    }
 }

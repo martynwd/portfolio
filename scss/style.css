@@ -17,6 +17,13 @@ body {
   font-size: 20px;
 }
 
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  body {
+    padding: 0px;
+    font-size: 10px;
+  }
+}
+
 body a {
   text-decoration: none;
   color: black;
@@ -25,6 +32,12 @@ body a {
 code {
   font-size: 30px;
   font-family: 'JetBrains Mono';
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  code {
+    font-size: 10px;
+  }
 }
 
 ul > li {
@@ -44,6 +57,13 @@ ul > li {
   -ms-grid-rows: 1fr 40fr 1fr;
       grid-template-rows: 1fr 40fr 1fr;
       grid-template-areas: 'header header header header' 'main main main main' 'footer footer footer footer';
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 header {
@@ -78,6 +98,23 @@ header > .logo {
   grid-area: l;
 }
 
+header > .logo > .logo_svg {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  header > .logo > .logo_svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+header > .logo > .logo_name {
+  margin: 0;
+}
+
 header > nav {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -106,9 +143,19 @@ header > .links {
   grid-area: lin;
 }
 
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  header > .links {
+    font-size: 10px;
+  }
+}
+
 header > .links > a {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 16px;
+}
+
+header > .links > img {
+  width: 150px;
+  height: 150px;
 }
 
 main {
@@ -133,12 +180,32 @@ main > .about {
   font-size: 30px;
 }
 
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  main > .about {
+    font-size: 10px;
+    height: 5rem;
+  }
+}
+
 main > .about > .photo {
   margin: 10%;
 }
 
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  main > .about > .photo {
+    margin: 5px;
+  }
+}
+
 main > .about > .photo > img {
   border-radius: 40%;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  main > .about > .photo > img {
+    width: 80px;
+    height: 90px;
+  }
 }
 
 main > .skills {
@@ -173,5 +240,73 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  footer {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  .logo_name {
+    font-size: 10px;
+  }
+}
+
+.svg_icon {
+  width: 40px;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  .svg_icon {
+    width: 20px;
+  }
+}
+
+.svg_icon_lg {
+  width: 100px;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  .svg_icon_lg {
+    width: 30px;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+#react {
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  width: 150px;
+  height: 150px;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  #react {
+    width: 30px;
+    height: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
