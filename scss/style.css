@@ -99,6 +99,12 @@ header > .logo {
   grid-area: l;
 }
 
+@media only screen and (min-width: 310px) and (max-width: 1024px) {
+  header > .logo {
+    margin-left: 10px;
+  }
+}
+
 header > .logo > .logo_svg {
   margin: 0;
   width: 50px;
@@ -109,6 +115,7 @@ header > .logo > .logo_svg {
   header > .logo > .logo_svg {
     width: 25px;
     height: 25px;
+    margin: 4px 2px 0 0;
   }
 }
 
