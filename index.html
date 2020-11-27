@@ -67,18 +67,23 @@
             <div class="skill"><img class="svg_icon_lg" src="./img/a.svg"></div>
         </section>
         <h3 class="topic">I guess my best code</h3>
-        <section class="code">
-            <code>
-                console.log('b' + 'a' + + 'a' + 'a').toLowerCase())
-            </code>
-            <pre>
-                ＜￣｀ヽ、　　　　　　　／￣＞
-                　ゝ、　　＼　／⌒ヽ,ノ 　/´
-                     ( ͡° ͜ʖ ͡°)／
-                　　 　　>　 　 　,ノ 　
-                　　　　　∠_,,,/´”
-                            </pre>
-        </section>
+        <div class="array_block">
+            <h3>It's simple random Array</h3>
+            <button id="sortButton">Sort it</button>
+        </div>
+        <div id="modal">
+            <span class="close">&times;</span>
+            <h3>Heh it's sorted array by qSort</h3>
+        </div>
+        <div class="room-gallery">
+            <img class="gallery-main" src="img/gallery1.jpg" alt="room1" />
+            <div class="room-preview">
+              <img src="./img/gallery1.jpg" class="room-active" alt="" />
+              <img src="./img/gallery2.jpg" class="room-active" alt="" />
+              <img src="./img/gallery3.jpg" alt="" />
+
+            </div>
+          </div>
     </main>
     <footer>
         <div class="links">
@@ -88,5 +93,7 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/sort.js"></script>
+<script src="./js/gallery.js"></script>
 </body>
 </html>
