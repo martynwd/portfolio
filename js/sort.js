@@ -78,9 +78,6 @@ let sotredArrToString = document.createElement('p').innerHTML = '[' + sortedArr.
 arrArea.append(arrToString)
 
 
-divWithNums.append(text)
-cont.append(divWithNums)
-
 var modal = document.getElementById("modal");
 
 
@@ -89,13 +86,20 @@ var btn = document.getElementById("sortButton");
 
 var span = document.getElementsByClassName("close")[0];
 
+ const Show = () =>{
+    modal.classList.remove('modal_hide')
+    modal.classList.add('modal_show')
+ }
 
-btn.onclick = function() {
-  modal.style.display = "block";
+ const Hide = () =>{
+  modal.classList.add('modal_hide')
+  modal.classList.remove('modal_show')
 }
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
+
+btn.addEventListener('click', Show);
+
+span.addEventListener('click',Hide)
+
 
 modal.append(sotredArrToString)

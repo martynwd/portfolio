@@ -115,7 +115,10 @@ header{
 
 }
 
-
+.photo_portrait{
+    max-width: 250px;
+    max-height: 250px;
+}
 
 main{
     grid-area: main;
@@ -208,7 +211,6 @@ footer{
     background-color: #ffffff;
     margin: auto;
     margin-bottom: 30px;
-    padding: 0;
     border: 1px solid rgb(0, 225, 255);
     border-radius: 20px;
     padding: 10px;
@@ -280,4 +282,16 @@ footer{
   
   img.room-active {
     opacity: 1;
+  }
+  .modal_show{
+      display: block;
+  }
+  .modal_hide{
+      display: none;
+  }
+  .loading{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 430px;
   }

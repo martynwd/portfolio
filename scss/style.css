@@ -172,6 +172,11 @@ header > .links > img {
   height: 150px;
 }
 
+.photo_portrait {
+  max-width: 250px;
+  max-height: 250px;
+}
+
 main {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -329,7 +334,6 @@ footer {
   background-color: #ffffff;
   margin: auto;
   margin-bottom: 30px;
-  padding: 0;
   border: 1px solid #00e1ff;
   border-radius: 20px;
   padding: 10px;
@@ -435,5 +439,26 @@ footer {
 
 img.room-active {
   opacity: 1;
+}
+
+.modal_show {
+  display: block;
+}
+
+.modal_hide {
+  display: none;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 430px;
 }
 /*# sourceMappingURL=style.css.map */

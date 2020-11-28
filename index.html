@@ -33,7 +33,7 @@
     <main>
         <section class="about">
             <div class="photo">
-                <img src="./img/portrait.jpg" alt="my photo">
+                <img class ="photo_portrait"src="./img/portrait.jpg" alt="my photo">
             </div>
             <div class="about__info">
                 Software Engener | Student
@@ -71,17 +71,16 @@
             <h3>It's simple random Array</h3>
             <button id="sortButton">Sort it</button>
         </div>
-        <div id="modal">
+        <div id="modal" class="modal_hide">
             <span class="close">&times;</span>
             <h3>Heh it's sorted array by qSort</h3>
         </div>
         <div class="room-gallery">
-            <img class="gallery-main" src="img/gallery1.jpg" alt="room1" />
+            <div class="loading">loading...</div>
             <div class="room-preview">
               <img src="./img/gallery1.jpg" class="room-active" alt="" />
-              <img src="./img/gallery2.jpg" class="room-active" alt="" />
+              <img src="./img/gallery2.jpg" alt="" />
               <img src="./img/gallery3.jpg" alt="" />
-
             </div>
           </div>
     </main>
@@ -92,8 +91,9 @@
     </footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="./js/script.js"></script>
+
 <script src="./js/sort.js"></script>
 <script src="./js/gallery.js"></script>
+<script src="./js/tags.js"></script>
 </body>
 </html>
