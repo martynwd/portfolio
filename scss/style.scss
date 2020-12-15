@@ -1,76 +1,75 @@
-@font-face{
+@font-face {
     font-family: "JetBrains Mono";
     src: url(../fonts/JetBrainsMono-Regular.ttf)
 }
-body{
 
+body {
     display: flex;
     justify-content: center;
     align-self: center;
     background-color: #5DCCD3;
     padding: 20px;
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
         padding: 0px;
         font-size: 10px;
     }
     font-size:20px;
 }
+
 body a {
-         text-decoration: none;
-            color: black;
+    text-decoration: none;
+    color: black;
 }
+
 code {
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
         font-size: 10px;
     }
     font-size: 30px;
     font-family: 'JetBrains Mono';
 }
-ul{
-    & > li{
+
+ul {
+    &>li {
         list-style-type: none;
     }
 }
 
-.container{
+.container {
     font-family: 'Roboto Mono', monospace;
     border-radius: 30px;
     background-color: #FAFAFA;
     width: 95%;
     height: 250vh;
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
         height: 100vh;
         width: 100%;
     }
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 40fr 1fr;
-    grid-template-areas:
-    'header header header header'
-    'main main main main'
-    'footer footer footer footer';
+    grid-template-areas: 'header header header header' 'main main main main' 'footer footer footer footer';
 }
 
-header{
+header {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 7fr 1fr;
     margin-inline-end: 5%;
     margin-bottom: 5%;
     grid-template-areas: "l n lin";
-
     grid-area: header;
     padding: 2%;
-    & > .logo{
-        @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+    &>.logo {
+        @media only screen and (min-width: 310px) and (max-width: 1024px) {
             margin-left: 10px;
         }
         display: flex;
         align-items: center;
         justify-content: space-ar;
         grid-area: l;
-        & > .logo_svg{
-            @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+        &>.logo_svg {
+            @media only screen and (min-width: 310px) and (max-width: 1024px) {
                 width: 25px;
                 height: 25px;
                 margin: 4px 2px 0 0;
@@ -79,52 +78,47 @@ header{
             width: 50px;
             height: 50px;
         }
-        & > .logo_name{
-            
-            margin:0;
-
+        &>.logo_name {
+            margin: 0;
         }
-
     }
-    & > nav{
-        @media only screen and (min-width: 310px)  and (max-width: 400px) {
+    &>nav {
+        @media only screen and (min-width: 310px) and (max-width: 400px) {
             display: none;
         }
         grid-area: n;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        
     }
-    & > .links{
-        @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+    &>.links {
+        @media only screen and (min-width: 310px) and (max-width: 1024px) {
             font-size: 10px;
         }
         display: flex;
         align-items: center;
         justify-content: space-around;
         grid-area: lin;
-        & > a{
+        &>a {
             margin: 0 16px;
         }
-        & > img{
+        &>img {
             width: 150px;
             height: 150px;
         }
     }
-
 }
 
-.photo_portrait{
+.photo_portrait {
     max-width: 250px;
     max-height: 250px;
 }
 
-main{
+main {
     grid-area: main;
     margin-bottom: 3%;
-    & > .about{
-        @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+    &>.about {
+        @media only screen and (min-width: 310px) and (max-width: 1024px) {
             font-size: 10px;
             height: 5rem;
         }
@@ -133,80 +127,90 @@ main{
         align-items: center;
         height: 10rem;
         font-size: 30px;
-        & > .photo{
-            @media only screen and (min-width: 310px)  and (max-width: 1024px) {
-                margin:5px;
+        &>.photo {
+            @media only screen and (min-width: 310px) and (max-width: 1024px) {
+                margin: 5px;
             }
             margin: 10%;
-            & > img{
-                @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+            &>img {
+                @media only screen and (min-width: 310px) and (max-width: 1024px) {
                     width: 90px;
                     height: 90px;
                 }
                 border-radius: 50%;
             }
-            
         }
     }
-    & > .skills{
+    &>.skills {
         display: flex;
         height: 20%;
         align-items: center;
-        justify-content: space-around   ;
+        justify-content: space-around;
     }
 }
 
-.topic{
+.topic {
     margin: 5% 3% 3% 3%;
 }
-.code{
-    padding:3%;
+
+.code {
+    padding: 3%;
 }
-.quote{
+
+.quote {
     margin-top: 5%;
 }
 
-footer{
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+footer {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
         padding: 1rem;
     }
     padding: 4rem;
     background-color: #e7e7e7;
-    border-radius: 0 0  30px 30px;
+    border-radius: 0 0 30px 30px;
     grid-area: footer;
 }
-.logo_name{
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
-        font-size:10px;
+
+.logo_name {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
+        font-size: 10px;
     }
 }
-.svg_icon{
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+
+.svg_icon {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
         width: 20px;
     }
     width: 40px;
 }
-.svg_icon_lg{
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+
+.svg_icon_lg {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
         width: 30px;
     }
     width: 100px;
 }
+
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% {  transform: rotate(359deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
 }
+
 #react {
     animation: spin 2s linear infinite;
     width: 150px;
     height: 150px;
-    @media only screen and (min-width: 310px)  and (max-width: 1024px) {
+    @media only screen and (min-width: 310px) and (max-width: 1024px) {
         width: 30px;
         height: 30px;
     }
 }
 
-#modal{
+#modal {
     position: relative;
     background-color: #ffffff;
     margin: auto;
@@ -215,33 +219,38 @@ footer{
     border-radius: 20px;
     padding: 10px;
     width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
 }
 
 @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-  }
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
 
- .close {
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
- .close:hover,
- .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-
-  #sortButton{
-    background-color: #5DCCD3; 
+#sortButton {
+    background-color: #5DCCD3;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -250,48 +259,162 @@ footer{
     display: inline-block;
     font-size: 16px;
     border-radius: 15px;
-  }
+}
 
-
-  .room-gallery {
+.room-gallery {
     margin: auto;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .gallery-main {
+}
+
+.gallery-main {
     max-height: 430px;
     width: 80%;
     height: 50%;
-  }
-  
-  .room-preview {
+}
+
+.room-preview {
     display: flex;
     width: 100%;
     border: 2px solid #5DCCD3;
-  }
-  .room-preview img {
+}
+
+.room-preview img {
     flex-grow: 1;
     height: 200px;
     opacity: 0.5;
     transition: opacity 0.4s ease;
     cursor: pointer;
-  }
-  
-  img.room-active {
+}
+
+img.room-active {
     opacity: 1;
-  }
-  .modal_show{
-      display: block;
-  }
-  .modal_hide{
-      display: none;
-  }
-  .loading{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 430px;
-  }
+}
+
+.modal_show {
+    display: block;
+}
+
+.modal_hide {
+    display: none;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 430px;
+}
+
+.chatButton {
+    position: fixed;
+    width: 45px;
+    height: 40px;
+    background: none;
+    border: none;
+    margin-inline-start: 17rem;
+}
+
+#chat {
+    display: none;
+    padding: 3rem;
+    position: fixed;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 75%;
+    border: aqua;
+    border-radius: 20px;
+    background-color: aquamarine;
+    overflow-y: scroll;
+    .visitorMessage {
+        background-color: blueviolet;
+        border-radius: 10px;
+        margin: 0.5rem 0 0.5rem 0;
+        padding: 0.5rem;
+        align-self: flex-start;
+        width: 50%;
+        font-size: 14px;
+    }
+    .botMessage {
+        background-color: chocolate;
+        margin: 0.5rem 0 0.5rem 0;
+        padding: 0.5rem;
+        border-radius: 10px;
+        width: 50%;
+        align-self: flex-end;
+        font-size: 14px;
+    }
+    .inp {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 280px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .inp .label {
+        position: absolute;
+        top: 20px;
+        left: 12px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+        transform-origin: 0 0;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease;
+        pointer-events: none;
+    }
+    .inp .focus-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.05);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    .inp input {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        border: 0;
+        font-family: inherit;
+        padding: 16px 12px 0 12px;
+        height: 56px;
+        font-size: 16px;
+        font-weight: 400;
+        background: rgba(0, 0, 0, 0.02);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+        color: #000;
+        transition: all 0.15s ease;
+    }
+    .inp input:hover {
+        background: rgba(0, 0, 0, 0.04);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+    .inp input:not(:placeholder-shown)+.label {
+        color: rgba(0, 0, 0, 0.5);
+        transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    .inp input:focus {
+        background: rgba(0, 0, 0, 0.05);
+        outline: none;
+        box-shadow: inset 0 -2px 0 #0077FF;
+    }
+    .inp input:focus+.label {
+        color: #0077FF;
+        transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    .inp input:focus+.label+.focus-bg {
+        transform: scaleX(1);
+        transition: all 0.1s ease;
+    }
+    #sendButton {}
+}
