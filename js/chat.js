@@ -29,7 +29,16 @@ let generateMessage = (data) => {
     let messageDiv = document.createElement('div');
     let messageText = document.createElement('span');
     let deleteButton = document.createElement('span');
-    deleteButton.id = 'deleteButton'
+    deleteButton.classList.add('deleteButton')
+    deleteButton.innerHTML = 'x'
+    deleteButton.addEventListener('click', (e) => {
+        e.target.parentNode.remove()
+    })
+    messageDiv.setAttribute('oncontextmenu', "javascript:deleteButton.style.display='block';return false;")
+        // messageDiv.addEventListener('contextmenu', function(ev) {
+        //     ev.preventDefault();
+        //     return false;
+        // }, false);
     messageText.innerHTML = data;
     messageDiv.classList.add('visitorMessage')
     messageDiv.appendChild(messageText)
@@ -42,7 +51,7 @@ let generateAnswer = () => {
     let messageDiv = document.createElement('div');
     let messageText = document.createElement('span');
     let deleteButton = document.createElement('span');
-    deleteButton.id = 'deleteButton'
+    messageDiv.addEventListener('oncontextmenu ', console.log('q jir'))
     messageDiv.classList.add('botMessage')
     messageText.innerHTML = dict.first[Math.floor(Math.random() * dict.first.length)] + dict.second[Math.floor(Math.random() * dict.second.length)] + dict.third[Math.floor(Math.random() * dict.third.length)];
     messageDiv.appendChild(messageText)
@@ -51,9 +60,9 @@ let generateAnswer = () => {
     return messageDiv;
 }
 let dict = {
-    first: ['q ', 'ку ', 'кульянити ', 'здарова ', 'приветствую '],
-    second: ['работяга ', 'смотрящий ', 'очередной ', 'забулдыга ', 'душный ', 'ПАПУГА '],
-    third: ['че жрал? ', 'что ел ', 'че седня жрал ', 'что хавал ', 'сколько регнул ']
+    first: ['Привет ', 'Здравствуй ', 'Добрый день ', 'Доброго времени суток ', 'приветствую '],
+    second: ['человек ', 'смотрящий ', 'очередной ', 'python developer ', 'верстальщик со стажем '],
+    third: ['как дела? ', 'что ел', 'сколько часов работал? ']
 }
 let emmiter = new EventEmitter();
 
@@ -106,6 +115,11 @@ emmiter.subscribe('chat:sendMessage', () => {
     input.value = ''
     chatDiv.appendChild(message)
     setTimeout(() => chatDiv.appendChild(generateAnswer()), 1000)
-    let sru = message.querySelector('deleteButton')
-    console.log(message)
 })
+
+el = document.querySelector('kekl')
+el.addEventListener('contextmenu', function(ev) {
+    ev.preventDefault();
+    alert('success!');
+    return false;
+}, false);

@@ -324,7 +324,7 @@ img.room-active {
     position: fixed;
     flex-direction: column;
     width: 300px;
-    height: 300px;
+    height: 350px;
     top: 50%;
     left: 75%;
     border: aqua;
@@ -332,7 +332,8 @@ img.room-active {
     background-color: aquamarine;
     overflow-y: scroll;
     .visitorMessage {
-        background-color: blueviolet;
+        display: inline-block;
+        background-color: rgb(190, 174, 214);
         border-radius: 10px;
         margin: 0.5rem 0 0.5rem 0;
         padding: 0.5rem;
@@ -416,5 +417,14 @@ img.room-active {
         transform: scaleX(1);
         transition: all 0.1s ease;
     }
-    #sendButton {}
+    .deleteButton {
+        //background-color: #FAFAFA;
+        //margin-inline-start: 6rem;
+        padding: 3px;
+        border-radius: 5px;
+        //display: none;
+    }
+    #closeButton {
+        font-size: 14px;
+    }
 }
